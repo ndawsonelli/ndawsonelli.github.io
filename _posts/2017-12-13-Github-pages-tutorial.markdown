@@ -176,7 +176,9 @@ I have managed to turn my photo into a potato-quality circle!!
 
 ![img_11](/assets/img/git_setup_11.PNG)
 
-Next, I make it bigger by reading what the text did and expanding `width` to 300px everywhere that I pasted it, and hope for the best.
+Next, I make it bigger by reading what the text did and expanding `width` to 300px everywhere that I pasted it, and hope for the best.  
+That doesn't seem to work, so I change the `webkit-border-radius` to 90% and resize the image to be a square, as it seems to be
+scaling it asymmetrically. And it works!
 
 ### Knowing When Something Failed
 Uh oh! I got a new email:
