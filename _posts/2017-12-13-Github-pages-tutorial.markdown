@@ -134,8 +134,49 @@ But what if that's not good enough? I want a LinkedIn-style photo in a bubble!
 I hop on over to [Flexible Jekyll](https://github.com/artemsheludko/flexible-jekyll) because I see that he's figured it out, and I poke around in his files.
 It turns out that he's more sophisticated than me, and uses css to modify the image into that elegant little circle.  However, with enough stapling and duct-taping, anything is possible!
 
+And by adding the following to my .css and .scss files:
+```
+about {
+  margin: 0 0 40px;
+  text-align: center;
+}
 
+.about .cover-author-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  overflow: hidden;
+  background-color: #333030;
+}
 
+.about img {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  -o-transition: transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+```
+and by wrapping the image in the HTML in the expected named `div`s:
+```
+<div class="about">
+	<div class="cover-author-image">
+		<a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/face.jpg" alt="That's me!"></a>
+	</div>
+</div>
+```
+
+I have managed to turn my photo into a potato-quality circle!!
+
+![img_11](/assets/img/git_setup_11.PNG)
+
+Next, I make it bigger by reading what the text did and expanding `width` to 300px everywhere that I pasted it, and hope for the best.
 
 ### Knowing When Something Failed
 Uh oh! I got a new email:
