@@ -132,6 +132,9 @@ And now my image appears where I want it! Lucky me!
 
 But what if that's not good enough? I want a LinkedIn-style photo in a bubble!
 I hop on over to [Flexible Jekyll](https://github.com/artemsheludko/flexible-jekyll) because I see that he's figured it out, and I poke around in his files.
+It turns out that he's more sophisticated than me, and uses css to modify the image into that elegant little circle.  However, with enough stapling and duct-taping, anything is possible!
+
+
 
 
 ### Knowing When Something Failed
