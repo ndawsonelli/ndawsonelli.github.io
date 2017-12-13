@@ -180,6 +180,10 @@ Next, I make it bigger by reading what the text did and expanding `width` to 300
 That doesn't seem to work, so I change the `webkit-border-radius` to 90% and resize the image to be a square, as it seems to be
 scaling it asymmetrically. And it works!
 
+![img_12](/assets/img/git_setup_12.PNG)
+
+One again, proving that you don't have to understand exactly how something works in order to implement it!
+
 ### Knowing When Something Failed
 Uh oh! I got a new email:
 
