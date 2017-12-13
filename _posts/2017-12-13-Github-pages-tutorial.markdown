@@ -62,6 +62,15 @@ by the jekyll engine.  To fix it, all we have to do is set the baseurl to "":
 While we're in there, we might as well modify the name and title as well.  These may have different effects depending upon 
 their implementation, but generally the title changes the text at the top of the web page, located in the tab.
 
+In order for these changes to effect the webpage, we have to `push` them.  in our Git Bash page, we type:
+```
+git add .
+git commit -m "modified baseurl, changed name and layout"
+git push
+```
+
+We wait, and the website rebuilds.  This process is slightly slower than ideal, but it totally removes any installation on our end!
+
 Next, we'd like to add a new blog post. 
 
 
@@ -78,7 +87,7 @@ The thought process goes like this:
 The `index.html` doesn't seem to contain anything in particular:
 ![img_6](/assets/img/git_setup_6.PNG)
 
-Anywhere that you see `{% blah blah %}`, that means there's something responsive there. That's how information is passed from `Markdown` files into `html` files.
+Anywhere that you see `"{% blah blah %}"`, that means there's something responsive there. That's how information is passed from `Markdown` files into `html` files.
 From this image, it looks like most of the `index.html` is spent hosting the first artivle and then calling Paginator.
 
 What about the `_layouts`? 
@@ -98,6 +107,16 @@ It looks like we're in the right spot - I see Home, About, Contact, all the thin
 
 But I don't know how to put an image in `html`! I'm not a web developer!
 [Here](http://lmgtfy.com/?q=html+add+an+image) is a link explaining it.
+
+
+### Knowing When Something Failed
+Uh oh! I got a new email:
+![img_9](/assets/img/git_setup_9.PNG)
+
+That means something went wrong in my previous build - it could be syntax, or it could be something else.  In my case, it was not putting `"{% blah blah %}"` in quotes - 
+`Markdown` recognizes it as a legitimate command and throws an error.
+
+
 
 
 
