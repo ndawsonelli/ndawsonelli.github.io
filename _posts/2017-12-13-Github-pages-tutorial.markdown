@@ -62,6 +62,44 @@ by the jekyll engine.  To fix it, all we have to do is set the baseurl to "":
 While we're in there, we might as well modify the name and title as well.  These may have different effects depending upon 
 their implementation, but generally the title changes the text at the top of the web page, located in the tab.
 
+Next, we'd like to add a new blog post. 
+
+
+### More Subtle Modifications - Understanding the File Structure
+Most of these will vary depending upon the theme you choose, but I can give some hints here.
+
+For example, Fresh doesn't include an image on the home page.  Since I want one, I have to figure out how to add it.
+
+The thought process goes like this:
+* Look at `index.html`. Is it hard coded?
+* Look at the `_layouts`. Is the modification there?
+* Look at the `_includes`.  Could it be in those files?
+
+The `index.html` doesn't seem to contain anything in particular:
+![img_6](/assets/img/git_setup_6.PNG)
+
+Anywhere that you see `{% blah blah %}`, that means there's something responsive there. That's how information is passed from `Markdown` files into `html` files.
+From this image, it looks like most of the `index.html` is spent hosting the first artivle and then calling Paginator.
+
+What about the `_layouts`? 
+![layouts](/assets/img/git_setup_layouts.PNG)
+
+There are only 2 files - default and post.  I know it's not post, since that is the `html` file that makes the layout for each post. What about default?
+![img_7](/assets/img/git_setup_7.PNG)
+#### Bingo!
+
+Inside default, I see some calls to include files. This means that the thing I want to change needs to be in the includes folder.  If the files are named rationally,
+it's most likely in the sidebar, since where I want to add it is a sidebar.
+![img_8](/assets/img/git_setup_8.PNG)
+
+Here's the `sidebar.html` from the `_includes` folder. 
+
+It looks like we're in the right spot - I see Home, About, Contact, all the things that are near where I want to make changes.
+
+But I don't know how to put an image in `html`! I'm not a web developer!
+[Here](http://lmgtfy.com/?q=html+add+an+image) is a link explaining it.
+
+
 
 
 
