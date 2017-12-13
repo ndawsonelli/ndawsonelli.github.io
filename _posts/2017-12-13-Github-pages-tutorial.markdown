@@ -79,6 +79,12 @@ Next, we'd like to add a new blog post.
 
 
 ### More Subtle Modifications - Understanding the File Structure
+
+The following represents the overall file structure for jekyll:
+
+![file_structure](/assets/img/git_setup_file_structure.PNG)
+
+
 Most of these will vary depending upon the theme you choose, but I can give some hints here.
 
 For example, Fresh doesn't include an image on the home page.  Since I want one, I have to figure out how to add it.
