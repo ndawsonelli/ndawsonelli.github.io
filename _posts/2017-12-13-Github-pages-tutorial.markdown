@@ -87,7 +87,7 @@ The thought process goes like this:
 The `index.html` doesn't seem to contain anything in particular:
 ![img_6](/assets/img/git_setup_6.PNG)
 
-Anywhere that you see `"{% blah blah %}"`, that means there's something responsive there. That's how information is passed from `Markdown` files into `html` files.
+Anywhere that you see `"{ blah blah }"`, that means there's something responsive there. That's how information is passed from `Markdown` files into `html` files.
 From this image, it looks like most of the `index.html` is spent hosting the first artivle and then calling Paginator.
 
 What about the `_layouts`? 
@@ -113,7 +113,7 @@ But I don't know how to put an image in `html`! I'm not a web developer!
 Uh oh! I got a new email:
 ![img_9](/assets/img/git_setup_9.PNG)
 
-That means something went wrong in my previous build - it could be syntax, or it could be something else.  In my case, it was not putting `"{% blah blah %}"` in quotes - 
+That means something went wrong in my previous build - it could be syntax, or it could be something else.  In my case, it was not putting `"{ blah blah }"` in quotes - 
 `Markdown` recognizes it as a legitimate command and throws an error.
 
 
