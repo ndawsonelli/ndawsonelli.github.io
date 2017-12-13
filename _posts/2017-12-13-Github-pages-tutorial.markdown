@@ -184,6 +184,21 @@ scaling it asymmetrically. And it works!
 
 One again, proving that you don't have to understand exactly how something works in order to implement it!
 
+Additionally, I wanted to host a PDF of my resume on the About page.
+
+It turns out that `Markdown` doesnt let you do that - but, `html` does, and it's allowed in markdown! so:
+```
+<div>
+<object data="https://ndawsonelli.github.io/assets/img/my_resume.pdf" type="application/pdf" >
+    <embed src="https://ndawsonelli.github.io/assets/img/my_resume.pdf">
+        This browser does not support PDFs. Please download the PDF to view it: <a href="https://ndawsonelli.github.io/assets/img/my_resume.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+</div>
+```
+
+The above code snippet, along with a hard-coded reference to my pdf's location, allow me to host the file in my web page.  Updating the PDF file in `/assets/img` will also change the hosted file. Neat!
+
 ### Knowing When Something Failed
 Uh oh! I got a new email:
 
