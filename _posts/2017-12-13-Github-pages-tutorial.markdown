@@ -19,6 +19,7 @@ To create a repository, go to [github](github.com) and create a new repository. 
 select the "New Repository" button.  
 
 Then, name your repository, as per the image below, and type whatever you'd like into the README:
+
 ![image1](/assets/img/git_setup_2.PNG)
 
 Once your repository is created, make a new folder somewhere on your computer and clone the repository to it.
@@ -43,9 +44,11 @@ git push -u origin master
 
 Next, head on over to your Github Pages home page!
 If you're lucky, it'll look like this:
+
 ![img_3](/assets/img/git_setup_3.PNG)
 
 If you're not, it'll look like this:
+
 ![img_4](/assets/img/git_setup_4.PNG)
 
 Now, we're on to the final stage - modification and troubleshooting!
@@ -57,6 +60,7 @@ In order to fix the above error, we need to modify the file that controls a lot 
 
 In this instance, the problem is with `baseurl` - the default baseurl doesn't match up with the other files which are created
 by the jekyll engine.  To fix it, all we have to do is set the baseurl to "":
+
 ![img_5](/assets/img/git_setup_5.PNG)
 
 While we're in there, we might as well modify the name and title as well.  These may have different effects depending upon 
@@ -85,20 +89,24 @@ The thought process goes like this:
 * Look at the `_includes`.  Could it be in those files?
 
 The `index.html` doesn't seem to contain anything in particular:
+
 ![img_6](/assets/img/git_setup_6.PNG)
 
 Anywhere that you see `"{ blah blah }"`, that means there's something responsive there. That's how information is passed from `Markdown` files into `html` files.
 From this image, it looks like most of the `index.html` is spent hosting the first artivle and then calling Paginator.
 
 What about the `_layouts`? 
+
 ![layouts](/assets/img/git_setup_layouts.PNG)
 
 There are only 2 files - default and post.  I know it's not post, since that is the `html` file that makes the layout for each post. What about default?
+
 ![img_7](/assets/img/git_setup_7.PNG)
 #### Bingo!
 
 Inside default, I see some calls to include files. This means that the thing I want to change needs to be in the includes folder.  If the files are named rationally,
 it's most likely in the sidebar, since where I want to add it is a sidebar.
+
 ![img_8](/assets/img/git_setup_8.PNG)
 
 Here's the `sidebar.html` from the `_includes` folder. 
@@ -108,12 +116,20 @@ It looks like we're in the right spot - I see Home, About, Contact, all the thin
 But I don't know how to put an image in `html`! I'm not a web developer!
 [Here](http://lmgtfy.com/?q=html+add+an+image) is a link explaining it.
 
+The line I added is there, right above the line that includes `Home`.  Here's the command:
+`<img src="{{site.baseurl}}/assets/img/face.jpg" alt="That's me!">`
+
+And now my image appears where I want it! Lucky me!
+
+![img_10](/assets/img/git_setup_10.PNG)
+
 
 ### Knowing When Something Failed
 Uh oh! I got a new email:
+
 ![img_9](/assets/img/git_setup_9.PNG)
 
-That means something went wrong in my previous build - it could be syntax, or it could be something else.  In my case, it was not putting `"{ blah blah }"` in quotes - 
+That means something went wrong in my previous build - it could be syntax, or it could be something else.  In my case, it was not omitting the `%` in `"{ blah blah }"` - 
 `Markdown` recognizes it as a legitimate command and throws an error.
 
 
