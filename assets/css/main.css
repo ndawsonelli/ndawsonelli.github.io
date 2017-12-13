@@ -786,8 +786,8 @@ about {
 }
 
 .about .cover-author-image {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   margin: 0 auto 10px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
