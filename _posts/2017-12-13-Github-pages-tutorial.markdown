@@ -9,12 +9,11 @@ description: A demo blog post about modifying Jekyll themes!
 ## Modifying a Jekyll Theme to fit your needs
 ### There are several steps. In order, they are:
 #### Step 1 - Create a github.io repository
-#### Step 2 - Populate it with a readme
-#### Step 3 - Find a new theme you like
-#### Step 4 - Replace your existing files with the theme's files
-#### Step 5 - Modify ad infinitum
+#### Step 2 - Find a new theme you like
+#### Step 3 - Replace your existing files with the theme's files
+#### Step 4 - Modify ad infinitum
 
-### Creating a repository:
+### Creating a Repository:
 To create a repository, go to [github](github.com) and create a new repository.  This can be done from the main page, once you're logged in, and 
 select the "New Repository" button.  
 
@@ -28,6 +27,24 @@ git init
 git remote add origin httpw://github.com/<your_github_username>/<your_repository_name>.github.io.git
 git pull -u origin master
 ```
+### Finding a Theme
+Head over to [Jekyll-Themes](http://jekyllthemes.org/) and start scrolling through them. If you find one you like, check out the demo!
+This theme is called [Fresh](http://jekyllthemes.org/themes/fresh/)
+
+### Download the Theme
+Select the Download button, unzip the file, and paste it into your newly created folder.
+Then, run the following commands. Feel free to change the commit message to whatever you like - the more descriptive, the better!
+```
+git add .
+git commit -m "updating theme"
+git push -u origin master
+```
+
+Next, head on over to your Github Pages home page!
+If you're lucky, it'll look like this:
+[img_3](/assets/img/git_setup_3.PNG)
+
+
 
 
 
