@@ -117,11 +117,15 @@ But I don't know how to put an image in `html`! I'm not a web developer!
 [Here](http://lmgtfy.com/?q=html+add+an+image) is a link explaining it.
 
 The line I added is there, right above the line that includes `Home`.  Here's the command:
+
 `<img src="{{site.baseurl}}/assets/img/face.jpg" alt="That's me!">`
 
 And now my image appears where I want it! Lucky me!
 
 ![img_10](/assets/img/git_setup_10.PNG)
+
+But what if that's not good enough? I want a LinkedIn-style photo in a bubble!
+I hop on over to [Flexible Jekyll](https://github.com/artemsheludko/flexible-jekyll) because I see that he's figured it out, and I poke around in his files.
 
 
 ### Knowing When Something Failed
