@@ -207,6 +207,8 @@ Uh oh! I got a new email:
 That means something went wrong in my previous build - it could be syntax, or it could be something else.  In my case, it was not omitting the `%` in `"{ blah blah }"` - 
 `Markdown` recognizes it as a legitimate command and throws an error.
 
+## Please fill out the [evaluation](https://docs.google.com/forms/d/e/1FAIpQLSd1Dl64nGUiY3jaHiz5P6QBQ3aJqkvq0lLkrgux92kKdt8HLQ/viewform?usp=sf_link) form!
+
 
 
 
